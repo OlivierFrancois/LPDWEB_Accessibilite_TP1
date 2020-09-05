@@ -4,10 +4,10 @@ http://jackadit.com/index.php?p=accessibilite6
 
 
 * _ ~~Choisir un DOCTYPE~~ _
-* ** Identifier votre langue **
+* **Identifier votre langue**
 	* Déclarer les mots étrangers aussi
 
-* Définir des titres de page qui ont une signification
+* ~~Définir des titres de page qui ont une signification~~
 	* Pour chaque page !
 
 * Fournir des aides supplémentaires à la navigation
@@ -18,7 +18,7 @@ http://jackadit.com/index.php?p=accessibilite6
 
 * S’absoudre des liens de navigation
 	* Plan du site ("skip to content")
-	* Tout site public doit avoir une barre de recherche
+	* **Tout site public doit avoir une barre de recherche** ( https://cse.google.com/cse/create/new )
 	* Petite flèche pour remonter en haut du site
 
 * Utiliser les couleurs sans danger
@@ -47,7 +47,7 @@ http://jackadit.com/index.php?p=accessibilite6
 	* Ajouter un summary (pour le résumé) dans la balise table
 
 * Ne pas utiliser les images d’espacement
-	* ne pas aller dans les années 80 (image vide pour faire de l'espacement)
+	* ne pas aller dans les années 80 (image vide pour faire de l'espacement dans tableaux)
 
 * Utiliser de vraies listes (ou les simuler correctement)
 	* ul/li
