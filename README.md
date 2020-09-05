@@ -2,9 +2,12 @@
 
 http://jackadit.com/index.php?p=accessibilite6
 
-Choisir un DOCTYPE
+___X___ FAIT
+___U___ EN COURS
+		A FAIRE
 
-Identifier votre langue
+___X___ Choisir un DOCTYPE
+___U___ Identifier votre langue
 	-> Déclarer les mots étrangers aussi
 
 Définir des titres de page qui ont une signification
