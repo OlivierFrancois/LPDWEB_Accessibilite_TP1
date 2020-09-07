@@ -1,0 +1,91 @@
+nav {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    background: linear-gradient(to top right, #333, #555);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+nav a {
+    color: #f1f1f1;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+/* Megamenu Accessible Adobe (retravaillé) */
+    .nav-menu {
+        position: relative;
+        list-style: none;
+        z-index: 15;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+/* Les éléments top du menu (Accueil, comment jouer...) */
+    .nav-item {
+        margin: 0 20px;
+    }
+
+    /* Les premiers lien descendant des éléments top */
+    .nav-item > a {
+        position: relative;
+        color: #f1f1f1;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+    /* Effet de soulignement des nav-item */
+    .nav-item::after, .sub-nav li::after {
+        display: block;
+        content: '';
+        width: 0%;
+        height: 1px;
+        margin: 0 auto;
+        background: #b10024;
+        transition: width 0.2s ease-in;
+    }
+    .nav-item:hover::after, .sub-nav li:hover::after {
+        width: 100%;
+    }
+
+    /* open state of first descendant link within a top level
+       navigation item */
+    .nav-item > a.open {
+        z-index: 1;
+    }
+
+    /* sub-navigation panel */
+    .sub-nav {
+        position: absolute;
+        display: none;
+        top: 2.6em;
+        margin-top: -1px;
+        padding: 0.5em 1em;
+        background-color: #333;
+        border-left: black solid 1px;
+        border-right: black solid 1px;
+        border-bottom: black solid 1px;
+    }
+
+    /* sub-navigation panel open state */
+    .sub-nav.open {
+        display: block;
+    }
+
+    /* list of items within sub-navigation panel */
+    .sub-nav ul {
+        display: inline-block;
+        vertical-align: top;
+        padding: 0;
+    }
+
+    /* list item within sub-navigation panel */
+    .sub-nav li {
+        display: block;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }

@@ -5,34 +5,78 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Billard à Haguenau</title>
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="CSS/style_nav.css">
 </head>
 <body>
 
 	<!-- Navigation -->
 	<nav>
-		<ul class="liste-nav">
-			<li class="item-nav"><a href="#accueil">Accueil</a></li>
-			<li class="item-nav"><a href="regles">Comment jouer</a></li>
-			<li class="item-nav"><a href="tarifs">Tarifs</a></li>
-			<li class="item-nav"><a href="contact">Contact</a></li>
+		<ul class="nav-menu">
+			<li class="nav-item"><a href="#accueil">Accueil</a></li>
+			<li class="nav-item">
+				<a href="?movie">Comment jouer ?</a>
+				<div class="sub-nav">
+					<ul class="sub-nav-group">
+						<li><a href="#">Billard anglais</a></li>
+						<li><a href="#">Billard américain</a></li>
+						<li><a href="#">Billard français</a></li>
+					</ul>
+				</div>
+			</li>
+			<li class="nav-item"><a href="#">Tarifs</a></li>
+			<li class="nav-item"><a href="#">Contact</a></li>
 		</ul>
+
 		<div class="nav-search">
 			<input type="search" id="nav-search-input" name="search" aria-label="Rechercher à travers le site" placeholder="Rechercher..">
 			<button class="nav-search-btn">Search</button>
 		</div>
-
 	</nav>
 
 	<section class="accueil" id="accueil">
 		<img src="ressources/logo-billard.png" alt="" class="logo-billard">
 		<h1>Billard à Haguenau</h1>
 		<p class="sous-titre">Une histoire ancienne, un sport moderne</p>
-
 	</section>
-	<div>
-		Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt eum animi hic tenetur, veniam dolorum labore aliquid dolorem fugiat unde vitae id culpa, sed enim, ex deleniti. Dicta velit fuga officia reiciendis ratione exercitationem sequi libero vitae laudantium ad! Ipsa reiciendis voluptatum est excepturi, sint sapiente ducimus dicta itaque a, quis placeat esse aperiam? Dolore accusamus dolores quam laborum voluptas voluptatem, odio quaerat veritatis eveniet consequatur facilis officiis enim quos voluptatibus autem assumenda ab. Ex, sunt temporibus. Cumque quod nesciunt optio quo cupiditate sequi, obcaecati excepturi consectetur voluptate soluta nam maxime. Quasi itaque veniam cumque, autem optio earum rerum amet ad ratione laudantium eos eius expedita. Cumque cupiditate obcaecati soluta nobis accusamus modi atque quasi explicabo, error eius esse alias. Hic deserunt debitis animi, doloremque sapiente iste rem repellendus magni dignissimos est sit, perspiciatis labore sed dolor. Blanditiis ex eaque, commodi architecto similique quisquam fugiat quaerat iste officiis illum ut non laudantium beatae repudiandae consequuntur ipsa facilis autem? Dignissimos iusto temporibus sed unde pariatur esse voluptate enim, ea sequi animi facere atque similique dolore quis sint quo reiciendis beatae doloremque repudiandae nostrum adipisci labore. Laudantium quis, necessitatibus nemo at magni inventore quod corrupti iure veniam, ut possimus itaque? Nihil, quidem atque quo aperiam natus id deleniti veniam sint quaerat error suscipit perferendis consequatur doloribus quisquam culpa, quam dicta itaque maiores, deserunt eum nostrum asperiores ipsam rem ab. Tempore dolores nobis ut voluptas at porro debitis laboriosam animi esse blanditiis eaque in eveniet tenetur, itaque facilis provident fuga. Voluptas iusto ullam, ipsum ratione cupiditate, labore iste odio culpa, animi veritatis nulla! Quisquam, ea natus! Aliquid fugit culpa qui? Suscipit corporis, nemo perferendis numquam soluta nesciunt quis doloremque eius minus molestias, dolorum consequatur, sapiente debitis voluptatibus impedit accusantium quisquam? Voluptates velit, inventore dignissimos obcaecati iure ab libero quod modi deserunt pariatur a cum sit amet in sequi laudantium ipsam consequuntur saepe labore eum possimus! Provident quis fuga reprehenderit. Consequuntur expedita cum sapiente iusto praesentium inventore fugit adipisci, soluta tempore animi corporis! Temporibus consequuntur sit non, quis aliquam, eum illum, ipsam magni exercitationem distinctio amet! Asperiores quos aut odio? Id dolore vel consequatur corrupti sapiente suscipit harum facere, dolorum eius natus, quod, inventore repudiandae porro sit cumque provident tenetur tempore tempora. Cumque nostrum illo id perferendis assumenda doloremque aut, eius culpa obcaecati minima iure ipsam, eum, delectus nihil harum sapiente dolore esse? Rem ex possimus voluptatum quis porro doloribus! Nulla dolore iusto accusantium veritatis esse facilis beatae quam, nesciunt placeat eveniet rem sunt quas? Obcaecati distinctio, dolor hic voluptas voluptatibus inventore pariatur, molestiae, et reiciendis beatae deleniti odit quidem. Nesciunt asperiores ratione odit illo sint officiis neque, maxime consectetur aliquam ea earum velit tenetur eaque temporibus, magni fuga iusto accusamus veritatis tempore! Non sequi sunt, nam sit suscipit quibusdam asperiores. Officia numquam earum error repudiandae enim delectus ex assumenda molestiae pariatur ipsam vel provident quae magnam sunt, totam reiciendis ipsum hic perspiciatis similique voluptatum natus? Adipisci dicta aliquid itaque, ullam quidem non repellat nemo sunt eos rem dolorem praesentium, amet esse laboriosam! Eos!
-	</div>
+
+
 
 	<script src="app.js"></script>
+
+	<!-- include jquery -->
+	<script src="//code.jquery.com/jquery-1.10.1.min.js"></script>
+
+	<!-- include the jquery-accessibleMegaMenu plugin script -->
+	<script src="js/jquery-accessibleMegaMenu.js"></script>
+
+	<!-- initialize a selector as an accessibleMegaMenu -->
+	<script>
+		$("nav:first").accessibleMegaMenu({
+			/* prefix for generated unique id attributes, which are required
+			to indicate aria-owns, aria-controls and aria-labelledby */
+			uuidPrefix: "accessible-megamenu",
+
+			/* css class used to define the megamenu styling */
+			menuClass: "nav-menu",
+
+			/* css class for a top-level navigation item in the megamenu */
+			topNavItemClass: "nav-item",
+
+			/* css class for a megamenu panel */
+			panelClass: "sub-nav",
+
+			/* css class for a group of items within a megamenu panel */
+			panelGroupClass: "sub-nav-group",
+
+			/* css class for the hover state */
+			hoverClass: "hover",
+
+			/* css class for the focus state */
+			focusClass: "focus",
+
+			/* css class for the open state */
+			openClass: "open"
+		});
+</script>
 </body>
 </html>
