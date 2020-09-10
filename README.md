@@ -7,6 +7,10 @@ http://jackadit.com/index.php?p=accessibilite6
 * **Identifier votre langue**
 	* Déclarer les mots étrangers aussi
 
+* Ne pas oublier, dans les texte, les balises a, abbr, lang...
+
+* utiliser balises blockquote pour les citations
+
 * ~~Définir des titres de page qui ont une signification~~
 	* Pour chaque page !
 

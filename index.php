@@ -12,19 +12,19 @@
 	<!-- Navigation -->
 	<nav>
 		<ul class="nav-menu">
-			<li class="nav-item"><a href="#accueil">Accueil</a></li>
+			<li class="nav-item"><a href="index.php?page=accueil">Accueil</a></li>
 			<li class="nav-item">
-				<a href="?movie">Comment jouer ?</a>
+				<a href="#">Comment jouer ?</a>
 				<div class="sub-nav">
 					<ul class="sub-nav-group">
-						<li><a href="#">Billard anglais</a></li>
-						<li><a href="#">Billard américain</a></li>
-						<li><a href="#">Billard français</a></li>
+						<li><a href="index.php?page=howtoplay_english">Billard anglais</a></li>
+						<li><a href="index.php?page=howtoplay_american">Billard américain</a></li>
+						<li><a href="index.php?page=howtoplay_french">Billard français</a></li>
 					</ul>
 				</div>
 			</li>
-			<li class="nav-item"><a href="#">Tarifs</a></li>
-			<li class="nav-item"><a href="#">Contact</a></li>
+			<li class="nav-item"><a href="index.php?page=tarifs">Tarifs</a></li>
+			<li class="nav-item"><a href="index.php?page=contact">Contact</a></li>
 		</ul>
 
 		<div class="nav-search">
@@ -33,13 +33,29 @@
 		</div>
 	</nav>
 
-	<section class="accueil" id="accueil">
-		<img src="ressources/logo-billard.png" alt="" class="logo-billard">
-		<h1>Billard à Haguenau</h1>
-		<p class="sous-titre">Une histoire ancienne, un sport moderne</p>
-	</section>
+	<?php
+	$current_page = isset($_GET['page']) ? $_GET['page'] : null;
 
-
+    switch ($current_page) {
+        case ('tarifs'):
+            include 'contents/tarifs.php';
+            break;
+        case ('contact'):
+            include 'contents/contact.php';
+            break;
+        case ('howtoplay_american'):
+            include 'contents/howtoplay_american.php';
+			break;
+		case ('howtoplay_french'):
+			include 'contents/howtoplay_french.php';
+			break;
+		case ('howtoplay_english'):
+			include 'contents/howtoplay_english.php';
+			break;
+        default:
+            include 'contents/accueil.php';
+    }
+	?>
 
 	<script src="app.js"></script>
 
